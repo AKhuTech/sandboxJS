@@ -9,8 +9,13 @@ function isPrime(num){
     return true
 }
 
-
-//Test cases
-for (let i = 1; i < 101; i++){
-    console.log(i, isPrime(i));
+//Get all prime numbers less than num or equal to num
+function getPrimes(num){
+    let result = [];
+    for (let i = 2; i < num; i++){
+        isPrime(i) ? result.push(i) : null;
+    }
+    return result;
 }
+
+console.log(getPrimes(100));
