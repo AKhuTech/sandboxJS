@@ -1,6 +1,3 @@
-// Online Javascript Editor for free
-// Write, Edit and Run your Javascript code using JS Online Compiler
-
 //sum of Three
 
 const array = [-1, 0, 1, 2, -1, -4];
@@ -69,6 +66,10 @@ function sumOfThreeOptimized(nums, target = 0){
             
             if (sum === target){
                 result.push([nums[i], nums[j], nums[k]]);
+                
+                while (nums[j] === nums[j+1]) j++;
+                while (nums[k] === nums[k-1]) k--;
+                
                 j++;
                 k--;
                 continue;
